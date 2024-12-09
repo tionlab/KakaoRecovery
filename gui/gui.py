@@ -1,5 +1,5 @@
 import os
-import sys
+from pathlib import Path
 import time
 import shutil
 import filetype
@@ -11,11 +11,8 @@ from playsound import playsound
 import webbrowser
 
 def resource_path(relative_path):
-    try:
-        base_path = sys._MEIPASS
-    except Exception:
-        base_path = os.path.abspath(".")
-    return os.path.join(base_path, relative_path)
+    base_path = Path(__file__).parent
+    return base_path / relative_path
 
 class KakaoTalkFileRecoveryApp:
     def __init__(self, root):
@@ -195,4 +192,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-# * pyinstaller --onefile --noconsole --icon=kakao.ico -n "KakaoRecovery" --add-data "kakao.png;." --add-data "end.mp3;." gui.py
+# * pyinstaller --noconsole --icon=kakao.ico -n "KakaoRecovery" --add-data "kakao.png;." --add-data "end.mp3;." gui.py

@@ -46,6 +46,31 @@ pip install ttkbootstrap filetype playsound
 python gui.py
 ```
 
+## FAQ
+
+### **Q 1. Android/data 폴더 내부로 접근이 안돼요...**
+
+A. [Android 정책](https://developer.android.com/about/versions/11/privacy/storage?hl=ko#file-access)상 핸드폰 내부에서 더이상 Android/data 폴더의 접근이 어렵습니다.
+[DocumentUI를 직접 접근](https://play.google.com/store/apps/details?id=com.marc.files)하여 우회하는 방법은 있으나, PC와 직접 케이블로 연결하셔서 꺼내시는편이 수월합니다.
+
+### **Q 2. 파이썬이나 pip 추가로 설치가 필요한가요?**
+
+A. [GitHub 릴리즈 페이지](https://github.com/tionlab/KakaoRecovery/releases/latest)에 올라간 zip의 exe을 실행시키는 경우 추가 설치가 필요하지 않습니다. 하지만, 소스코드로 실행하시는 경우 파이썬 3.12와 requirements.txt에 적혀있는 모듈을 추가로 설치해주셔야 합니다.
+
+### **Q 3. 사진 동영상과 같은 미디어 파일만 복구되는건가요? 문서 파일은 복구가 안되나요?**
+
+A. 확인해본 결과 문서도 복구가 가능합니다. 단, 몇몇 문서 파일(.hwp)는
+확장자가 인식이 되지 않아 파일명이 `문서명.hwp.unknown`으로 복구되었을 수
+있습니다. 해당 파일명에서 `.unknown`을 지워주시고 원래 문서 확장자로 바꿔주시면
+정상적으로 복구 됩니다.
+
+### **Q 4. 복구가 완료되었는데도 결과물 폴더에 복구된 데이터가 없어요/적어요.**
+
+A. 사용하시는 모바일 기기에서 카카오톡의 데이터/캐시를 삭제하신 경우 contents 폴더에
+파일이 남아있지 않습니다. 이 경우 KakaoRecovery 프로그램으로 복구가 어렵습니다.
+
+> 추가 질문사항은 [이곳](https://discord.com/invite/k3qm6RbpHc)을 통해 질문해주세요.
+
 ## 주의사항 ⚠️
 
 -   원본 contents 폴더 내 파일을 수정하지 마세요.

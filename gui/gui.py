@@ -194,3 +194,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# * pyinstaller --onefile --noconsole --icon=kakao.ico -n "KakaoRecovery" --add-data "kakao.png;." --add-data "end.mp3;." gui.py

@@ -1,0 +1,53 @@
+GNU Affero General Public License v3.0 with Non-Commercial Clause
+Copyright (C) 2024 tionlab
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+---
+
+### Additional Non-Commercial Clause:
+
+This software is licensed under the GNU Affero General Public License (AGPL) v3.0 with the following additional restriction:
+
+1. **Non-Commercial Use Only**:
+   This software, including its source code and any modifications, may not be used for commercial purposes without the explicit prior written consent of the copyright holder.
+
+    - "Commercial purposes" include, but are not limited to, the sale of the software, its use as part of a for-profit service, or its integration into a product or service sold for profit.
+
+2. **Permission for Commercial Use**:
+   If you wish to use this software for commercial purposes, you must obtain prior written permission from the copyright holder. To request permission, contact [https://github.com/tionlab].
+
+3. **Conflict with AGPL Terms**:
+   In the event of any conflict between the terms of the GNU Affero General Public License v3.0 and the Non-Commercial Clause, the Non-Commercial Clause shall take precedence.
+
+### 추가 상업적 이용 제한 조항
+
+이 소프트웨어는 GNU Affero General Public License (AGPL) v3.0 라이선스를 따르지만 다음 추가 제한이 적용됩니다.
+
+1. **비상업적 이용만 가능**:  
+   이 소프트웨어와 소스 코드, 수정본을 상업적 목적으로 사용하는 것은 저작권자의 명시적 서면 허가 없이는 불가합니다.
+
+    - "상업적 목적"에는 소프트웨어를 판매하거나, 유료 서비스에 통합하거나, 상업적 목적으로 재사용하는 행위가 포함됩니다.
+
+2. **상업적 이용 허가 요청**:  
+   상업적 목적으로 이 소프트웨어를 사용하고자 하는 경우, 저작권자에게 사전에 서면으로 허가를 요청해야 합니다.
+
+    - 요청은 [https://github.com/tionlab]로 해주시기 바랍니다.
+
+3. **AGPL 조건과 상충할 경우**:  
+   GNU Affero General Public License v3.0 조건과 본 상업적 제한 조항이 상충하는 경우, 상업적 제한 조항이 우선 적용됩니다.
+
+---
+
+For a full copy of the GNU Affero General Public License, see <https://www.gnu.org/licenses/>.

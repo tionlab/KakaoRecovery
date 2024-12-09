@@ -14,8 +14,8 @@ KakaoRecovery는 카카오톡의 만료된 파일을 `Android\data\com.kakao.tal
 
 ## 사용 방법 🎯
 
-1. [GitHub 릴리즈 페이지](https://github.com/tionlab/KakaoRecovery/releases/latest)에서 KakaoRecovery.exe 최신버전(v0.0.1) 다운로드
-2. 다운로드 받은 KakaoRecovery.exe 실행
+1. [GitHub 릴리즈 페이지](https://github.com/tionlab/KakaoRecovery/releases/latest)에서 KakaoRecovery.zip 최신버전(v0.0.2) 다운로드 및 압축해제
+2. KakaoRecovery 실행
 3. '원본 contents 폴더' 경로 지정
 4. '시작' 버튼 클릭
 
@@ -34,7 +34,7 @@ KakaoRecovery는 카카오톡의 만료된 파일을 `Android\data\com.kakao.tal
 
 ```bash
 # 실행 파일 다운로드 (GUI)
-최신 릴리즈에서 KakaoRecovery.exe 다운로드 및 실행
+최신 릴리즈에서 KakaoRecovery.zip 다운로드 및 압축해제 후 KakaoRecovery 실행
 
 # 또는 소스코드 실행 (No GUI)
 pip install tqdm filetype

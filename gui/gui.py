@@ -102,8 +102,7 @@ class KakaoTalkFileRecoveryApp:
         self.stop_button.pack(side=LEFT, padx=10)
 
     def show_usage(self):
-        messagebox.showinfo("준비중", "해당 기능은 아직 준비중입니다.")
-        # webbrowser.open("https://www.youtube.com/")
+        webbrowser.open("https://www.youtube.com/watch?v=m23KHWat6u8")
 
     def show_license(self):
         webbrowser.open("https://github.com/tionlab/KakaoRecovery/blob/main/LICENSE")
@@ -192,4 +191,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-# * pyinstaller --noconsole --icon=kakao.ico -n "KakaoRecovery" --add-data "kakao.png;." --add-data "end.mp3;." gui.py
+# * nuitka --standalone --enable-plugin=tk-inter --windows-console-mode=disable --windows-icon-from-ico=kakao.ico --output-filename=KakaoRecovery.exe --include-data-files=kakao.png=./ --include-data-files=end.mp3=./ gui.py

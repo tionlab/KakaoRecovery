@@ -14,7 +14,7 @@ KakaoRecovery는 카카오톡의 만료된 파일을 `Android\data\com.kakao.tal
 
 ## 사용 방법 🎯
 
-1. [GitHub 릴리즈 페이지](https://github.com/tionlab/KakaoRecovery/releases/latest)에서 KakaoRecovery.zip 최신버전(v0.0.2) 다운로드 및 압축해제
+1. [GitHub 릴리즈 페이지](https://github.com/tionlab/KakaoRecovery/releases/latest)에서 KakaoRecovery.zip 최신버전(v0.1.0) 다운로드 및 압축해제
 2. KakaoRecovery 실행
 3. '원본 contents 폴더' 경로 지정
 4. '시작' 버튼 클릭

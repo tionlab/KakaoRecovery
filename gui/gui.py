@@ -19,11 +19,17 @@ class KakaoTalkFileRecoveryApp:
         self.root = root
         self.stopped = False
         self.setup_ui()
-    
+
     def setup_ui(self):
         self.root.title("KakaoRecovery")
         self.root.resizable(True, True)
-        self.root.minsize(800, 400)
+        
+        screen_width = self.root.winfo_screenwidth()
+        screen_height = self.root.winfo_screenheight()
+        window_width = screen_width // 3
+        window_height = screen_height // 3
+        self.root.geometry(f"{window_width}x{window_height}")
+        self.root.minsize(800, 500)
 
         icon_path = resource_path('kakao.png')
         icon = PhotoImage(file=icon_path)
@@ -35,9 +41,10 @@ class KakaoTalkFileRecoveryApp:
         menubar.add_cascade(label="License", command=self.show_license)
         self.center_window(self.root) 
 
+
         main_frame = ttk.Frame(self.root)
         main_frame.pack(fill=BOTH, expand=YES, padx=20, pady=20)
-
+        
         title_label = ttk.Label(
             main_frame, 
             text="카카오톡 파일 복구 프로그램", 
@@ -100,12 +107,33 @@ class KakaoTalkFileRecoveryApp:
 
         self.stop_button = self.create_btn(inner_button_frame, "중지", self.stop_recovery, 'danger')
         self.stop_button.pack(side=LEFT, padx=10)
+        
+        warning_text = " " * 50 + "※ 본 프로그램은 상업적 이용이 금지된 소프트웨어입니다. 최근 본 프로그램의 상업적 사용 사례가 지속적으로 확인되고 있으며, 이는 명백한 라이선스 위반 행위에 해당합니다. 이러한 위반이 계속될 경우, 관련 법률에 따라 법적 대응이 이루어질 수 있음을 엄중히 경고드립니다. ※"
+        warning_frame = ttk.Frame(self.root, style='dark.TFrame')
+        warning_frame.pack(fill=X, pady=(0, 10))
+        
+        warning_label = ttk.Label(
+            warning_frame,
+            text=warning_text,
+            font=("TkDefaultFont", 10),
+            foreground="red",
+            background="black",
+            style='dark.TLabel'
+        )
+        warning_label.pack(pady=5)
+        self.scroll_text(warning_label)
 
     def show_usage(self):
         webbrowser.open("https://www.youtube.com/watch?v=m23KHWat6u8")
 
     def show_license(self):
         webbrowser.open("https://github.com/tionlab/KakaoRecovery/blob/main/LICENSE")
+    
+    def scroll_text(self, label):
+        text = label.cget("text")
+        text = text[1:] + text[0]
+        label.config(text=text)
+        label.after(100, lambda: self.scroll_text(label))
 
     def recover_files(self, input_dir, output_dir):
         try:
@@ -168,10 +196,11 @@ class KakaoTalkFileRecoveryApp:
         window.update_idletasks()
         screen_width = window.winfo_screenwidth()
         screen_height = window.winfo_screenheight()
-        size = tuple(int(_) for _ in window.geometry().split('+')[0].split('x'))
-        x = screen_width/2 - size[0]/2
-        y = screen_height/2 - size[1]/2
-        window.geometry(f"+{int(x)}+{int(y)}")
+        window_width = window.winfo_width()
+        window_height = window.winfo_height()
+        x = (screen_width - window_width) // 2
+        y = (screen_height - window_height) // 2
+        window.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
     def on_output_entry_focus_in(self, _):
         if self.output_entry.get() == self.output_placeholder:
@@ -191,4 +220,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-# * nuitka --standalone --enable-plugin=tk-inter --windows-console-mode=disable --windows-icon-from-ico=kakao.ico --output-filename=KakaoRecovery.exe --include-data-files=kakao.png=./ --include-data-files=end.mp3=./ gui.py
+# * nuitka --standalone --enable-plugin=tk-inter --mingw64 --windows-console-mode=disable --windows-icon-from-ico=kakao.ico --output-filename=KakaoRecovery.exe --include-data-files=kakao.png=./ --include-data-files=end.mp3=./ gui.py
